@@ -16,7 +16,7 @@ bid_dict[bidder_name] = bidder_val
 to_continue = input("Are there any other bidders? type 'yes' or 'no' ")
 
 while to_continue == 'yes':
-    os.system('cls')
+    os.system('clear')
     next_bidder_name = input('What is your name?: ')
     next_bidder_val = int(input('What is your bid?: $'))
 
