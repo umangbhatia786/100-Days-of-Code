@@ -52,7 +52,6 @@ def is_transaction_valid(user_input,input_money):
         return True
 
 def update_resources(user_input):
-    resources['money'] = 0
     if user_input == 'espresso':
         resources['water'] -= MENU[user_input]['ingredients']['water']
         resources['coffee'] -= MENU[user_input]['ingredients']['coffee']
@@ -63,7 +62,10 @@ def update_resources(user_input):
         resources['coffee'] -= MENU[user_input]['ingredients']['coffee']
         resources['money'] += MENU[user_input]['cost']
 
-def refill_resoureces()
+def refill_coffee_machine():
+    resources['water'] = 300
+    resources['milk'] = 200
+    resources['coffee'] = 100
 
 def coffee_vending_machine():
     print(logo)
@@ -92,8 +94,16 @@ def coffee_vending_machine():
                     continue
             else:
                 continue
-        if user_input == 'off':
+        elif user_input == 'off':
             is_machine_on = False
+        elif user_input == 'refill':
+            username = input('Enter admin username: ')
+            password = input('Enter admin password: ')
+
+            if username == 'admin' and password == 'admin':
+                refill_coffee_machine()
+            else:
+                print('Invalid Credentials! Access denied')
 
 coffee_vending_machine()
             
