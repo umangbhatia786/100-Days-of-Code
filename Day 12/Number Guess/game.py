@@ -20,7 +20,7 @@ while(level_required):
             attempts = 5
 
 random_choice = random.randrange(1,100)
-print(random_choice)
+
 while(attempts>0):
     user_guess = int(input('Make a guess: '))
 
