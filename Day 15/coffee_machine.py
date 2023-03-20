@@ -63,7 +63,7 @@ def update_resources(user_input):
         resources['coffee'] -= MENU[user_input]['ingredients']['coffee']
         resources['money'] += MENU[user_input]['cost']
 
-    
+def refill_resoureces()
 
 def coffee_vending_machine():
     print(logo)
